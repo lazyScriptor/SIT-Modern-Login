@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Paper, TextField, Typography } from "@mui/material";
-import './login.css'
+import "./login.css";
 import monitor from "../assets/monitor.png";
 import element from "../assets/element1.png";
 import Visibility from "@mui/icons-material/Visibility";
@@ -63,7 +63,14 @@ export default function Login() {
           >
             If you don't have an <br /> account you can
           </Typography>
-          <a href="https://www.google.com/" style={{ zIndex: 20000, position: "relative" }}>
+          <a
+            href="https://www.google.com/"
+            style={{
+              zIndex: 20000,
+              position: "relative",
+              textDecoration: "none",
+            }}
+          >
             <Typography variant="h5" sx={{ color: "#05DAB8", mt: 1, ml: 5 }}>
               Register here!
             </Typography>
@@ -163,7 +170,14 @@ export default function Login() {
         >
           Sign in
         </Button>
-        <Typography color={"grey"}>forgot passwoed ? </Typography>
+        <Box justifyContent={"center"} display={"flex"}>
+          <Typography sx={{}} color={"grey"}>
+            forgot password ?
+          </Typography>
+          <a href="https://www.google.com" style={{ textDecoration: "none" }}>
+            <Typography sx={{ color: "#05DAB8" }}> Sign in here</Typography>{" "}
+          </a>
+        </Box>
       </Box>
       <img
         src={purple}
